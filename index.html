@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO APP</title>
+    <title>To-Do List</title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Input section -->
 
-    <h1 id="title">TO DO APP</h1>
+    <h1 id="title">To-Do List</h1>
     <div class="input-container">
-        <input type="text" class="input-text">
-        <button class="add-text">Add</button>
+        <input type="text" class="input-text" placeholder="Add a new task">
+        <button class="add-task">Add Task</button>
     </div>
 
     <!-- Filter options, completed or on going tasks -->
@@ -24,10 +29,8 @@
 
     <!-- Ul list that will show tasks -->
 
-    <ul class="show-tasks">
-         
-    </ul>
+    <ul class="show-tasks"></ul>
 
-    
+    <script src="script.js"></script>
 </body>
 </html>
