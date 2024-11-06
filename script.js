@@ -1,10 +1,15 @@
 //Basic DOM structure to interface with HTML elements
 
 document.querySelector('.add-task').addEventListener('click', addTask);
+document.querySelector('.filter-completed').addEventListener('click', filterCompleted);
+document.querySelector('.filter-on-going').addEventListener('click', filterOnGoing);
+
+const taskInput = document.querySelector('.input-text');
+const taskList = document.querySelector('.show-tasks');
+
 
 function addTask () {
-    const taskInput = document.querySelector('.input-text');
-    const taskList = document.querySelector('.show-tasks');
+   
 
     if(taskInput.value.trim() !== '') {
 
@@ -41,4 +46,33 @@ function addTask () {
     }
 }
 
-//Need to add DOM JS for filtering completed and on going tasks
+// Filter section
+
+// Assign the children of the parent element taskList the variable tasks. 
+let tasks = taskList.children;
+
+function filterCompleted(){
+    
+// Loop through the array of tasks.
+    for(let task of tasks){
+        if(task.classList.contains('completed')){
+            task.style.display = ''
+        } else {
+            task.style.display = 'none';
+        }
+    }
+}
+
+
+// Same logic applied for the on going tasks.
+function filterOnGoing(){
+    
+
+    for(let task of tasks){
+        if(!task.classList.contains('completed')){
+            task.style.display = ''
+        } else {
+            task.style.display = 'none';
+        }
+    }
+}
