@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Share+Tech&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
     <title>To-Do List</title>
-    <style>
-        .completed {
-            text-decoration: line-through;
-        }
-    </style>
 </head>
 <body>
 
@@ -16,7 +13,7 @@
 
     <h1 id="title">To-Do List</h1>
     <div class="input-container">
-        <input type="text" class="input-text" placeholder="Add a new task">
+        <input type="text" class="input-text" placeholder="Enter a task">
         <button class="add-task">Add Task</button>
     </div>
 
@@ -25,11 +22,14 @@
     <div class="filter-option">
         <button class="filter-completed">Completed</button>
         <button class="filter-on-going">On going</button>
+        <button class="filter-all">All</button>
     </div>
 
     <!-- Ul list that will show tasks -->
 
-    <ul class="show-tasks"></ul>
+    <div class="list">
+        <ul class="show-tasks"></ul>
+    </div>
 
     <script src="script.js"></script>
 </body>

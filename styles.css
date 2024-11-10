@@ -1,0 +1,87 @@
+
+/* Universal styling */
+
+* {
+    box-sizing: border-box;
+    font-family: "Sniglet", system-ui;
+}
+
+body {
+    margin:0;
+    background-image: url('https://images.inc.com/uploaded_files/image/1920x1080/getty_638884198_366705.jpg');
+    background-position: top;
+    background-repeat:repeat-y;
+    background-size: cover;
+}
+
+button {
+    width: 5rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-color: hsla(32, 58%, 61%, 0.9);
+    border-radius: 5px;
+    border: transparent;
+    transition: background-color 0.4s ease;
+}
+
+/* h1 */
+
+#title {
+    text-align: center;
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+/* Input and filter sections */
+
+.input-container, .filter-option{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.input-text {
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+
+.input-text::placeholder {
+    font-size: 1.4rem;
+}
+
+.filter-option{
+    border: 1px solid white;
+    border-right: none;
+    border-left: none;
+    padding: 1.4rem;
+    
+    
+}
+
+/* Tasks list */
+
+
+.list {
+    display: flex;
+    justify-content: center;
+}
+
+.show-tasks li {
+    font-size: 1.7rem;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Hover buttons */
+
+button:hover {
+    background-color: hsl(40, 16%, 93%);
+}
+
+button:active {
+    background-color: hsla(32, 58%, 61%, 0.9);
+    font-size: 0.7rem;
+}

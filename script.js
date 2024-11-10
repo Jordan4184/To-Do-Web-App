@@ -3,6 +3,8 @@
 document.querySelector('.add-task').addEventListener('click', addTask);
 document.querySelector('.filter-completed').addEventListener('click', filterCompleted);
 document.querySelector('.filter-on-going').addEventListener('click', filterOnGoing);
+document.querySelector('.filter-all').addEventListener('click', filterAll);
+
 
 const taskInput = document.querySelector('.input-text');
 const taskList = document.querySelector('.show-tasks');
@@ -52,27 +54,43 @@ function addTask () {
 let tasks = taskList.children;
 
 function filterCompleted(){
-    
+
 // Loop through the array of tasks.
     for(let task of tasks){
+
         if(task.classList.contains('completed')){
-            task.style.display = ''
+            task.style.display = '';
         } else {
             task.style.display = 'none';
+            }
         }
-    }
-}
+
+    };
+
 
 
 // Same logic applied for the on going tasks.
 function filterOnGoing(){
     
-
     for(let task of tasks){
+
         if(!task.classList.contains('completed')){
-            task.style.display = ''
+            task.style.display = '';
         } else {
             task.style.display = 'none';
         }
     }
-}
+};
+
+
+// Filter all tasks
+
+function filterAll(){
+    
+// Using ternary operator.
+
+        for (let task of tasks) {
+            task.style.display = task.classList.contains('completed') || task.classList.contains('') ? '' : '';
+        }
+    };
+    
